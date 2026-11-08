@@ -948,6 +948,7 @@ May your home shine with love, laughter and beautiful memories.
 Wishing you and your family a very Happy Diwali! 🎆
 
 🪔 शुभ दीपावली! 🪔
+✨ Created with love by Devarshi ❤️
         `.trim();
 
         wishResult.textContent = generatedWish;
