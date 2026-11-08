@@ -1,0 +1,106 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#160b29">
+
+    <title>Happy Diwali | Festival of Lights</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Fireworks Canvas -->
+    <canvas id="fireworks"></canvas>
+
+    <!-- Background Decorations -->
+    <div class="background-glow"></div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="logo">🪔 Diwali Celebration</div>
+
+        <button id="musicBtn" class="music-btn">
+            🔇 Music Off
+        </button>
+    </header>
+
+    <!-- Main Section -->
+    <main class="hero">
+
+        <div class="diya diya-left">🪔</div>
+        <div class="diya diya-right">🪔</div>
+
+        <div class="hero-content">
+
+            <p class="subtitle">
+                ✨ THE FESTIVAL OF LIGHTS ✨
+            </p>
+
+            <h1>
+                Happy <span>Diwali!</span>
+            </h1>
+
+            <h2>दीपावलीच्या हार्दिक शुभेच्छा</h2>
+
+            <p class="description">
+                May this Diwali bring happiness, prosperity,
+                love and endless light into your life.
+            </p>
+
+            <!-- Fireworks Button -->
+            <button id="celebrateBtn" class="celebrate-btn">
+                🎆 Celebrate Now
+            </button>
+
+            <!-- Name Input -->
+            <div class="wish-box">
+
+                <h3>Create Your Diwali Wish</h3>
+
+                <input
+                    type="text"
+                    id="userName"
+                    placeholder="Enter your name"
+                    maxlength="40"
+                >
+
+                <textarea
+                    id="userMessage"
+                    placeholder="Write your Diwali message..."
+                    maxlength="150"
+                ></textarea>
+
+                <button id="generateBtn">
+                    ✨ Generate Wish
+                </button>
+
+                <div id="wishResult" class="wish-result" aria-live="polite"></div>
+
+                <button id="whatsappBtn" class="whatsapp-btn">
+                    Share on WhatsApp
+                </button>
+
+            </div>
+
+            <p class="click-hint">
+                👆 Tap anywhere to launch fireworks!
+            </p>
+
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        Made with ❤️ and ✨ for Diwali
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+</html>

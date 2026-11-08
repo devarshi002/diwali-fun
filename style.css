@@ -1,0 +1,405 @@
+
+/* =================================
+   DIWALI CELEBRATION WEBSITE
+   Main Stylesheet
+================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    overflow-x: hidden;
+    font-family: 'Segoe UI', sans-serif;
+    color: #ffffff;
+    background:
+        radial-gradient(ellipse at top, #52206f 0%, transparent 55%),
+        linear-gradient(135deg, #160b29, #300c43, #09051a);
+}
+
+/* Fireworks Canvas */
+
+#fireworks {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 10;
+}
+
+/* Background Glow */
+
+.background-glow {
+    position: fixed;
+    width: 450px;
+    height: 450px;
+    background: #ff8c00;
+    filter: blur(180px);
+    opacity: 0.15;
+    top: 20%;
+    left: 35%;
+    pointer-events: none;
+}
+
+/* Header */
+
+.header {
+    width: 100%;
+    padding: 22px 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    z-index: 20;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: 700;
+    color: #ffd166;
+    letter-spacing: 1px;
+}
+
+.music-btn {
+    padding: 11px 20px;
+    border: 1px solid #ffd166;
+    border-radius: 30px;
+    background: transparent;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.music-btn:hover {
+    background: #ffd166;
+    color: #240b35;
+}
+
+/* Hero Section */
+
+.hero {
+    min-height: calc(100vh - 130px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 40px 20px;
+}
+
+.hero-content {
+    width: 100%;
+    max-width: 700px;
+    text-align: center;
+    position: relative;
+    z-index: 5;
+}
+
+/* Diya Decorations */
+
+.diya {
+    position: absolute;
+    font-size: 85px;
+    animation: diyaGlow 2s infinite alternate;
+    filter: drop-shadow(0 0 20px #ff9d00);
+}
+
+.diya-left {
+    left: 7%;
+    top: 25%;
+}
+
+.diya-right {
+    right: 7%;
+    top: 25%;
+}
+
+@keyframes diyaGlow {
+    from {
+        transform: translateY(0);
+        filter: drop-shadow(0 0 10px #ff9d00);
+    }
+
+    to {
+        transform: translateY(-12px);
+        filter: drop-shadow(0 0 30px #ffcc33);
+    }
+}
+
+/* Main Text */
+
+.subtitle {
+    color: #ffcf70;
+    letter-spacing: 5px;
+    font-size: 13px;
+    margin-bottom: 22px;
+}
+
+h1 {
+    font-size: clamp(55px, 9vw, 100px);
+    font-weight: 900;
+    line-height: 1.1;
+    margin-bottom: 15px;
+    text-shadow: 0 0 30px #ff8c00;
+}
+
+h1 span {
+    background: linear-gradient(
+        90deg,
+        #ffcf33,
+        #ff7043,
+        #ffcf33
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+h2 {
+    color: #ffd166;
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+.description {
+    max-width: 550px;
+    margin: 0 auto 30px;
+    line-height: 1.8;
+    color: #e9d9f7;
+    font-size: 16px;
+}
+
+/* Celebrate Button */
+
+.celebrate-btn {
+    padding: 16px 35px;
+    font-size: 17px;
+    font-weight: 700;
+    color: #3c153d;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    background: linear-gradient(90deg, #ffcf33, #ff7848);
+    box-shadow: 0 0 25px #ff9d00;
+    transition: 0.3s;
+}
+
+.celebrate-btn:hover {
+    transform: scale(1.08);
+    box-shadow: 0 0 45px #ffcc33;
+}
+
+/* Personalized Wish Box */
+
+.wish-box {
+    margin: 45px auto 0;
+    padding: 30px;
+    max-width: 480px;
+    border: 1px solid rgba(255, 209, 102, 0.4);
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(15px);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.25);
+}
+
+.wish-box h3 {
+    color: #ffd166;
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.wish-box input,
+.wish-box textarea {
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 209, 102, 0.5);
+    background: rgba(0, 0, 0, 0.25);
+    color: white;
+    outline: none;
+    font-family: inherit;
+    font-size: 15px;
+}
+
+.wish-box input::placeholder,
+.wish-box textarea::placeholder {
+    color: #cbbbd9;
+}
+
+.wish-box input:focus,
+.wish-box textarea:focus {
+    border-color: #ffd166;
+}
+
+.wish-box textarea {
+    min-height: 85px;
+    resize: vertical;
+}
+
+#generateBtn,
+.whatsapp-btn {
+    width: 100%;
+    padding: 13px;
+    margin-bottom: 12px;
+    border: none;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#generateBtn {
+    background: #ffd166;
+    color: #30133b;
+}
+
+#generateBtn:hover {
+    background: #ffad33;
+    transform: translateY(-2px);
+}
+
+.whatsapp-btn {
+    background: #25d366;
+    color: white;
+}
+
+.whatsapp-btn:hover {
+    background: #16b957;
+    transform: translateY(-2px);
+}
+
+.wish-result {
+    display: none;
+    margin: 15px 0;
+    padding: 18px;
+    border-radius: 12px;
+    background: rgba(255, 209, 102, 0.12);
+    border: 1px dashed #ffd166;
+    color: #ffe5a3;
+    line-height: 1.7;
+    overflow-wrap: anywhere;
+}
+
+.wish-result.show {
+    display: block;
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Click Hint */
+
+.click-hint {
+    margin-top: 30px;
+    color: #d8c1ec;
+    font-size: 13px;
+    animation: hintBlink 2s infinite;
+}
+
+@keyframes hintBlink {
+    50% {
+        opacity: 0.5;
+    }
+}
+
+/* Footer */
+
+.footer {
+    text-align: center;
+    padding: 20px;
+    color: #cdb7e2;
+    font-size: 13px;
+    position: relative;
+    z-index: 5;
+}
+
+/* Mobile Responsive */
+
+@media (max-width: 768px) {
+
+    .header {
+        padding: 18px 5%;
+    }
+
+    .logo {
+        font-size: 16px;
+    }
+
+    .music-btn {
+        padding: 9px 12px;
+        font-size: 12px;
+    }
+
+    .hero {
+        padding: 35px 18px;
+    }
+
+    .diya {
+        font-size: 48px;
+        top: 10%;
+    }
+
+    .diya-left {
+        left: 3%;
+    }
+
+    .diya-right {
+        right: 3%;
+    }
+
+    .subtitle {
+        font-size: 10px;
+        letter-spacing: 3px;
+    }
+
+    h1 {
+        font-size: 54px;
+    }
+
+    h2 {
+        font-size: 19px;
+    }
+
+    .description {
+        font-size: 14px;
+    }
+
+    .wish-box {
+        padding: 20px;
+        margin-top: 35px;
+    }
+}
+
+@media (max-width: 380px) {
+
+    h1 {
+        font-size: 45px;
+    }
+
+    .diya {
+        font-size: 38px;
+    }
+
+    .wish-box {
+        padding: 15px;
+    }
+}
