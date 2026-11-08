@@ -908,3 +908,69 @@ console.log(
     "%c🎆 DIWALI PRO SKYSHOT ENGINE READY",
     "color:#ffcc33;font-size:18px;font-weight:bold"
 );
+
+
+
+
+/* ==========================================
+   PERSONALIZED DIWALI WISH GENERATOR
+========================================== */
+
+const generateBtn = document.getElementById("generateBtn");
+const userName = document.getElementById("userName");
+const userMessage = document.getElementById("userMessage");
+const wishResult = document.getElementById("wishResult");
+const whatsappBtn = document.getElementById("whatsappBtn");
+
+let generatedWish = "";
+
+if (generateBtn) {
+    generateBtn.addEventListener("click", function () {
+
+        const name = userName.value.trim();
+        const customMessage = userMessage.value.trim();
+
+        if (!name) {
+            alert("Please enter your name first! 😊");
+            userName.focus();
+            return;
+        }
+
+        generatedWish = `
+🪔✨ Happy Diwali! ✨🪔
+
+Dear ${name},
+
+${customMessage || "May this Diwali bring happiness, prosperity, success and endless joy into your life."}
+
+May your home shine with love, laughter and beautiful memories.
+
+Wishing you and your family a very Happy Diwali! 🎆
+
+🪔 शुभ दीपावली! 🪔
+        `.trim();
+
+        wishResult.textContent = generatedWish;
+        wishResult.style.display = "block";
+
+        if (whatsappBtn) {
+            whatsappBtn.style.display = "inline-block";
+        }
+    });
+}
+
+if (whatsappBtn) {
+    whatsappBtn.addEventListener("click", function () {
+
+        if (!generatedWish) {
+            alert("Please generate your wish first!");
+            return;
+        }
+
+        const whatsappURL =
+            "https://wa.me/?text=" +
+            encodeURIComponent(generatedWish);
+
+        window.open(whatsappURL, "_blank");
+    });
+}
